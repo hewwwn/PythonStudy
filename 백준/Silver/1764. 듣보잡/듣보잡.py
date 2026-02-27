@@ -1,0 +1,20 @@
+import sys
+input = sys.stdin.readline
+
+N,M = map(int,input().split())
+
+not_heard = set()
+not_seen = set()
+
+for _ in range(N):
+    not_heard.add(input().strip())
+    
+for _ in range(M):
+    not_seen.add(input().strip())
+    
+result=sorted(not_heard & not_seen)
+
+print(len(result))
+for name in result:
+    print(name)
+    
